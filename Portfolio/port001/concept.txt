@@ -1,0 +1,13 @@
+/*
+* Black and White concept
+*/
+
+
+//Color palette
+Color	Hex	RGB
+#ffffff	(255,255,255)
+#bfbfbf	(191,191,191)
+#7f7f7f	(127,127,127)
+#404040	(64,64,64)
+#000000	(0,0,0)
+ 
