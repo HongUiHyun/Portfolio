@@ -71,6 +71,22 @@ class SinglyLinkedList {
     }
     return false;
   }
+
+  reverse(sll) {
+    let node = sll.head,
+      prev = null;
+
+    while (node) {
+      let tmp = node.next;
+      node.next = prev;
+      prev = node;
+      if (!tmp) {
+        break;
+      }
+      node = tmp;
+    }
+    return node;
+  }
 }
 
 function DoubleylinkedListNode(value) {
@@ -228,19 +244,34 @@ class DoubleylinkedList {
     this.size--;
   }
 }
-let linkedList = new DoubleylinkedList();
-linkedList.append(1);
-linkedList.append(2);
-linkedList.append(23);
-linkedList.append(123);
-linkedList.append(777);
-linkedList.append(436);
+
+/**
+ * Other methods
+ */
+
+function removeDuplication(sll) {
+  var hashTable = {},
+    tmp = sll.head,
+    prev = null;
+  console.log(tmp);
+
+  while (tmp) {
+    if (!hashTable[tmp.element]) {
+      hashTable[tmp.element] = true;
+      prev = tmp;
+    } else {
+      prev.next = tmp.next;
+      sll.size--;
+    }
+    if (!tmp) break;
+    tmp = tmp.next;
+  }
+  console.log(hashTable);
+}
+let linkedList = new SinglyLinkedList();
+linkedList.insert(1);
+linkedList.insert(2);
+linkedList.insert(2);
+linkedList.insert(3);
+removeDuplication(linkedList);
 console.log(linkedList);
-linkedList.insertAt(0, 10);
-console.log(linkedList);
-linkedList.insertAt(3, 12);
-console.log(linkedList);
-console.log(linkedList.getList());
-linkedList.removeAt(3);
-console.log(linkedList.getList());
-linkedList.aa;
