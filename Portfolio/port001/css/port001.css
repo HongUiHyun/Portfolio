@@ -1,46 +1,90 @@
 * {
-  box-sizing: border-box;
+  font-family: "Roboto", "Noto Sans KR", "sans-serif";
 }
 
-.nav-menu {
-  background-color: #404040;
-  color: #ffffff;
-  height: 10vh;
-  position: relative;
-}
-.nav-menu a {
-  display: inline;
-  background-color: #404040;
-  color: #ffffff;
-  text-decoration: none;
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Roboto/Roboto-Light.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf") format("opentype");
+  unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
 }
 
-.nav-menu ul {
-  width: 100%;
+body {
+  background: #84898c;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  background: #ffffff;
+  height: 50px;
+  width: 75%;
+  border-radius: 10px;
+  margin: 0 auto 10px auto;
+}
+.cotent-wrapper {
+  border-radius: 10px;
+  background: #f0f0f3;
+  width: 70%;
   height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: traslateX(-50%) traslateY(-50%);
-}
-.nav-menu ul li {
-  font-size: 1.3em;
-  margin: 0 10px;
-  display: inline;
+  margin: 0 auto;
+  padding: 10px 40px;
+  box-shadow: -10px -10px 10px 0 #aeaec090 inset, 10px 10px 10px 0 #ffffff inset;
 }
 
-.container:nth-of-type(2n) {
-  font-size: 100px;
-  width: 100%;
-  height: 100vh;
-  background-color: #404040;
-  color: #ffffff;
+.intro {
+  text-align: center;
+  margin: 50px 0;
+  letter-spacing: 15px;
 }
 
-.container:nth-of-type(2n-1) {
-  font-size: 100px;
-  width: 100%;
-  height: 100vh;
-  background-color: #ffffff;
-  color: #000000;
+.card-container {
+  display: flex;
+  text-align: center;
+}
+
+.card-container div {
+  flex: 1 200px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+.neumo-plat {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec0;
+}
+
+.neumo-convex {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 30px 0 #ffffff, 10px 10px 30px 0 #aeaec0,
+    -10px -10px 10px 0 #aeaec090 inset, 10px 10px 10px 0 #ffffff inset;
+}
+
+.neumo-concave {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: -10px -10px 10px 0 #ffffff80 inset,
+    10px 10px 10px 0 #aeaec060 inset;
+}
+
+.image-container img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 15px solid #84898c;
+  margin: 10px;
+  width: 60%;
+  height: 200px;
+  object-fit: cover;
+}
+.image-container div {
+  padding: 10px;
+  justify-content: centers;
+}
+
+.img-card {
+  display: flex;
 }
