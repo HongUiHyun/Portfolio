@@ -1,14 +1,14 @@
+/**
+ *Linked list
+ * Easy to insert/delete but searching is slow
+ */
+//Singly liked list
 function Node(element) {
   this.element = element;
   this.next = null;
 }
 
-function singlyLinkedListNode() {
-  this.head = null;
-  this.size = 0;
-}
-
-class singlyLinkedList {
+class SinglyLinkedList {
   constructor() {
     this.head = null;
     this.size = 0;
@@ -46,7 +46,6 @@ class singlyLinkedList {
       preNode.next = null;
     }
     this.size--;
-    console.log(currentNode);
   }
 
   getList() {
@@ -59,16 +58,189 @@ class singlyLinkedList {
       }
       currentNode = currentNode.next;
     }
-    console.log(listArr);
+    return listArr;
+  }
+
+  has(value) {
+    var currentNode = this.head;
+    while (currentNode.next) {
+      if (currentNode.element == value) {
+        return true;
+      }
+      currentNode = currentNode.next;
+    }
+    return false;
   }
 }
 
-let linkedList = new singlyLinkedList();
-linkedList.insert(1);
-linkedList.insert(12);
-linkedList.insert(3);
-linkedList.insert(4);
-linkedList.insert(6);
-linkedList.remove(3);
+function DoubleylinkedListNode(value) {
+  this.element = value;
+  this.prev = null;
+  this.next = null;
+}
+
+// Doubly likedlist
+class DoubleylinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+    this.size = 0;
+  }
+
+  prepend(value) {
+    let currentNode = new DoubleylinkedListNode(value);
+    if (this.head === null) {
+      this.head = currentNode;
+      this.tail = this.head;
+    } else {
+      currentNode.next = this.head;
+      this.head.prev = currentNode;
+      this.head = currentNode;
+    }
+    this.size++;
+  }
+
+  append(value) {
+    let currentNode = new DoubleylinkedListNode(value);
+    if (this.tail == null) {
+      this.tail = currentNode;
+      this.head = this.tail;
+    } else {
+      currentNode.prev = this.tail;
+      this.tail.next = currentNode;
+      this.tail = currentNode;
+    }
+    this.size++;
+  }
+
+  insertAt(index, value) {
+    function findNode(index, head) {
+      for (var i = 0; i < index; i++) {
+        head = head.next;
+      }
+      return head;
+    }
+
+    if (index == 0) {
+      this.prepend(value);
+      return 0;
+    } else if (index + 1 == this.size) {
+      this.append(value);
+      return 0;
+    } else if (index + 1 > this.size) {
+      throw "index doesn't exist";
+    } else {
+      let head = this.head;
+      let currentNode = new DoubleylinkedListNode(value);
+      let preNode = findNode(index - 1, head);
+      let nextNode = findNode(index, head);
+      currentNode.prev = preNode;
+      currentNode.next = nextNode;
+      nextNode.prev = currentNode;
+      preNode.next = currentNode;
+    }
+    this.size++;
+  }
+  removeHead() {
+    if (this.head == this.tail) {
+      headNode == null;
+      this.tail == null;
+    } else {
+      this.head = this.head.next;
+      this.head.prev = null;
+    }
+    this.size--;
+  }
+
+  removeTail() {
+    if (this.tail != null) {
+      this.tail.prev.next = null;
+      this.tail = this.tail.prev;
+    }
+    this.size--;
+  }
+
+  getList() {
+    let currentNode = this.head,
+      tmpArr = [];
+    for (var i = 0; i < this.size; i++) {
+      tmpArr.push(currentNode.element);
+      currentNode = currentNode.next;
+    }
+    return tmpArr;
+  }
+
+  indexOfValue(index) {
+    let listSize = this.size;
+    if (index + 1 > listSize) {
+      throw ": Index doesn't exist.";
+    }
+
+    if (index < listSize / 2) {
+      let node = this.head;
+      for (var i = 0; i < index; i++) {
+        node = node.next;
+      }
+      return node.element;
+    } else {
+      let node = this.tail;
+      for (var i = listSize; i > index + 1; i--) {
+        node = node.prev;
+      }
+      return node.element;
+    }
+  }
+
+  indexOf(value) {
+    let currentNode = this.head,
+      index = 0;
+    while (currentNode.element != value) {
+      currentNode = currentNode.next;
+      index++;
+      if (currentNode == null) {
+        return -1;
+      }
+    }
+    return index;
+  }
+
+  removeAt(index) {
+    function findNode(index, head) {
+      for (var i = 0; i < index; i++) {
+        head = head.next;
+      }
+      return head;
+    }
+
+    if (index == 0) {
+      this.removeHead();
+    } else if (index == this.size - 1) {
+      this.removeTail();
+    } else {
+      let head = this.head;
+      let preNode = findNode(index - 1, head);
+      let currentNode = findNode(index, head);
+      let nextNode = findNode(index + 1, head);
+
+      preNode.next = nextNode;
+      nextNode.prev = preNode;
+    }
+    this.size--;
+  }
+}
+let linkedList = new DoubleylinkedList();
+linkedList.append(1);
+linkedList.append(2);
+linkedList.append(23);
+linkedList.append(123);
+linkedList.append(777);
+linkedList.append(436);
 console.log(linkedList);
-linkedList.getList();
+linkedList.insertAt(0, 10);
+console.log(linkedList);
+linkedList.insertAt(3, 12);
+console.log(linkedList);
+console.log(linkedList.getList());
+linkedList.removeAt(3);
+console.log(linkedList.getList());
+linkedList.aa;
