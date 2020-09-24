@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        <div>
+            <ul class="nameList">
+
+            </ul>
+        </div>
+      <div>
+        <span>Search by contact name:</span>
+        <input class="name" type="text" />
+        <button class="search" type="sumit">Search</button>
+      </div>
+      <div>
+        <p>
+          <h2 class="context">Type the name</h2>
+        </p>
+      </div>
+    </div>
+
+    <script>
+        const list = ['Chris','Sarah','Bill','Mary','Dianne']
+        const contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
+        const searchBtn = document.querySelector('.search');
+        const context = document.querySelector('.context');
+        const nameList = document.querySelector('.nameList');
+
+        
+        for(var n=0,nameLen=list.length;n<nameLen;n++){
+            let listElement = document.createElement('li');
+            listElement.textContent = list[n];
+            nameList.appendChild(listElement);
+        }
+
+        searchBtn.addEventListener('click',function(){
+            const input = document.querySelector('.name');
+            const name = input.value;
+            for(var i =0, len = contacts.length;i<len;i++){
+                let element = contacts[i];
+                element = element.split(':');
+                let contactName = element[0];
+                let contactNum = element[1];
+                if(name.toLowerCase()===contactName.toLowerCase()){
+                    context.textContent  =  `${contactName}'s number is ${contactNum}`;
+                    break;
+                }else{
+                    context.textContent = "Contact not found ";
+                }
+            }
+        })
+    </script>
+  </body>
+</html>

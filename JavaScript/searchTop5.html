@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <input class="val" type="text" />
+      <button class="serach" type="submit">search</button>
+      <ul class="ulLst"></ul>
+    </div>
+
+    <script>
+      let ulLst = document.querySelector(".ulLst");
+      const btn = document.querySelector(".serach");
+      let input = document.querySelector(".val");
+      let dataList = [];
+      btn.addEventListener("click", function () {
+        if (dataList.length == 5) {
+          dataList.pop();
+        }
+        ulLst.innerHTML = "";
+        let val = input.value;
+        dataList.unshift(val);
+        console.log(dataList);
+
+        for (var i = 0, dataLen = dataList.length; i < dataLen; i++) {
+          let dataElement = dataList[i];
+          if (dataElement) {
+            let list = document.createElement("li");
+            list.textContent = dataElement;
+            ulLst.appendChild(list);
+          }
+        }
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span><strong>Live output</strong></span>
+      <div>
+        Select theme:
+        <select name="colorSelection" id="colorSelection">
+          <option value="default">--Select Color--</option>
+          <option value="White">White</option>
+          <option value="Black">Black</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Blue">Blue</option>
+        </select>
+      </div>
+    </div>
+    <p class="context">
+        <h1>Change the theme!</h1>
+    </p>
+
+    <script>
+        const selected = document.querySelector('#colorSelection');
+        selected.addEventListener('change',function(){
+            let color = selected.value;
+            let bgColor = '',FontColor = '';
+            console.log(color);
+            switch (color) {
+                case "White":
+                    bgColor = 'white'
+                    FontColor = 'black';
+                    break;
+                case "Black":
+                    bgColor = "black";
+                    FontColor = "white";     
+                    break;
+                case "Yellow":
+                    bgColor = "Yellow";
+                    FontColor = "gray";     
+                    break;                
+                case "Blue":
+                    bgColor = "blue";
+                    FontColor = "yellow";     
+                    break;
+                default:
+                    break;
+            }
+            let bodyColor = document.querySelector('body');
+            bodyColor.style.backgroundColor = bgColor;
+            bodyColor.style.color = FontColor;
+        });
+
+        
+    </script>
+  </body>
+</html>
