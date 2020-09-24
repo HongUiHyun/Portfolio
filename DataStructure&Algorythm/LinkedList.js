@@ -275,3 +275,22 @@ linkedList.insert(2);
 linkedList.insert(3);
 removeDuplication(linkedList);
 console.log(linkedList);
+
+function ListNode(val, next) {
+  this.val = val === undefined ? 0 : val;
+  this.next = next === undefined ? null : next;
+}
+
+let arr = [8, 0, 7],
+  node = null;
+
+for (var i = 0, len = arr.length; i < len; i++) {
+  if (node == null) {
+    node = new ListNode(arr[i]);
+  } else {
+    let tmp = node;
+    node.next = new ListNode(arr[i]);
+    node = node.next;
+  }
+  console.log(node);
+}
