@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 100px;
+}
+.display {
+  width: 200px;
+  height: 100px;
+  margin: auto;
+  border: 1px solid silver;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 45px;
+  font-style: bold;
+  padding-top: 20px;
+}
+.controls {
+  text-align: center;
+  border: 1px solid silver;
+  border-top: none;
+}
+.controls button {
+  width: 80px;
+  height: 30px;
+  margin: 5px 5px;
+  padding: 1px 5px;
+}
+
+.board {
+  border: 1px solid silver;
+  padding: 5px 5px;
+}
+.board h3 {
+  border-bottom: 1px solid silver;
+}
+
+.board p {
+  margin-top: 2px;
+  text-align: center;
+  letter-spacing: 4px;
+}
