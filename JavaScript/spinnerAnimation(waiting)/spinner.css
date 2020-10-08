@@ -1,0 +1,21 @@
+html {
+  background-color: #ffffff;
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  background-color: #000000;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+}
+
+div {
+  display: inline-block;
+  font-size: 10rem;
+  color: #ffffff;
+  text-shadow: 5px 5px 5px #ffffff;
+}

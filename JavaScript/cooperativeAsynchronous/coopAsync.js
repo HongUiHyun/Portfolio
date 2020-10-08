@@ -14,3 +14,23 @@ function displayTime() {
 }
 
 const createClock = setInterval(displayTime, 1000);
+
+let i = 1;
+
+// setInterval(function run() {
+//   console.log(i);
+//   i++;
+// }, 100);
+
+let startTime = null;
+
+function draw(timestamp) {
+  if (!startTime) {
+    startTime = timestamp;
+  }
+  currentTime = timestamp - startTime;
+  console.log(currentTime);
+  requestAnimationFrame(draw);
+}
+
+draw();
