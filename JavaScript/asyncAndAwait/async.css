@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+#pictures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pictures img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+#description {
+  margin-top: 20px;
+  text-align: center;
+}
