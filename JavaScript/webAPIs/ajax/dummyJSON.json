@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Hong",
+    "gender": "male",
+    "age": "31"
+  },
+  {
+    "name": "Whang",
+    "gender": "male",
+    "age": "25"
+  },
+  {
+    "name": "Kim",
+    "gender": "female",
+    "age": "32"
+  },
+  {
+    "name": "Han",
+    "gender": "female",
+    "age": "33"
+  }
+]
