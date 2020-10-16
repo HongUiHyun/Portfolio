@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+}
+
+.header {
+  color: #ecf0f1;
+  padding: 10px 10px;
+}
+
+.container {
+  width: 70vh;
+  height: auto;
+}
+
+.context {
+  height: auto;
+  min-height: 300px;
+  border: 1px solid #dfe6e9;
+  padding: 10px 10px;
+}
+.context > h2 {
+  color: #7f8c8d;
+  border-bottom: #7f8c8d;
+}
+
+.context .note-list {
+  margin: 5px 5px 40px 10px;
+}
+.note-container li {
+  margin: 15px 5px;
+  list-style: none;
+}
+
+.note-list p {
+  margin-top: 10px;
+  margin-left: 5px;
+  color: #7f8c8d;
+  border-bottom: 1px solid #7f8c8d;
+}
+.note-list button {
+  margin-top: 10px;
+  float: right;
+  background-color: #ffff;
+  border: 2px solid #74b9ff;
+  border-radius: 5px;
+  color: #7f8c8d;
+}
+.note-list button:focus {
+  outline: none;
+  color: #2c3e50;
+  border: 2px solid #b2bec3;
+}
+
+.header {
+  text-align: center;
+  background-color: #74b9ff;
+  color: #ffff;
+}
+
+.form-control {
+  width: 100%;
+  height: auto;
+  padding: 5px 5px;
+  background-color: #74b9ff;
+  color: #ffff;
+}
+
+.note-form {
+  margin: 10px 0px;
+}
+.note-form .form-group {
+  text-align: center;
+}
+
+.form-control label {
+  font-size: 1.2rem;
+}
+.form-control input[type="text"] {
+  width: 70%;
+  height: 40px;
+  margin: 10px 5px;
+  padding: 5px 5px;
+  border: 1px solid #dfe6e9;
+  border-radius: 10px;
+}
+.form-control .submit {
+  text-align: center;
+}
+
+.form-control input[type="text"]:focus {
+  outline: none;
+
+  border: 2px solid #b2bec3;
+}
+
+.create-note {
+  width: 150px;
+  height: 30px;
+  margin-top: 10px;
+  padding: 5px 5px;
+  border: 1px solid #b2bec3;
+  border-radius: 5px;
+  color: #7f8c8d;
+  font-weight: bold;
+  background-color: #ffff;
+}
+
+.create-note:focus {
+  outline: none;
+  color: #2c3e50;
+  border: 2px solid #b2bec3;
+}

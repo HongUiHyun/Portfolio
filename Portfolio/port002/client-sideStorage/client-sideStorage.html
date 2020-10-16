@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="client-sideStorage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>IndexedDB notes demo</h1>
+        </div>
+        <div class="context">
+            <h2>Note</h2>
+            <div class="note-container">
+                <ul class="note-list">
+
+                </ul>
+            </div>
+        </div>
+        <div class="form-control">
+            <h2>Enter a new note</h2>
+            <form class="note-form" action="" method="POST">
+                <div class="form-group">
+                    <div>
+                        <label for="note-title">Note title:</label>
+                        <input type="text" name="note-title" class="note-title">
+                    </div>
+                    <div>
+                        <label for="note-text">Note text:</label>
+                        <input type="text" name="note-text" class="note-text">
+                    </div>
+                </div>
+                <div class="submit">
+                    <button type="button" id="create-note" class="create-note">Create new note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="client-sideStorage.js"></script>
+</body>
+</html>
