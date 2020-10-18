@@ -1,0 +1,64 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 20px 20px;
+  border: 1px solid #a9a9a9a9;
+  padding: 20px 40px;
+  border-radius: 2rem;
+}
+
+section {
+  margin: 20px 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  width: 277px;
+}
+fieldset {
+  padding: 10px 10px;
+  width: 300px;
+  margin-left: 128px;
+}
+
+input {
+  width: 300px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+}
+
+label span {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+
+label {
+  position: relative;
+  width: 130px;
+}
+label em {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+
+button {
+  margin: 20px 0 0 124px;
+}

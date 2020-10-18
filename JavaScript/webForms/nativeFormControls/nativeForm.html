@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="nativeForm.css" />
+  </head>
+  <body>
+    <!--
+          basic form
+      -->
+    <div class="container">
+      <div class="form-control">
+        <form action="#" method="post">
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_email" />
+            </li>
+            <li>
+              <label for="msg">Message:</label>
+              <textarea name="user_message" id="msg"></textarea>
+            </li>
+            <li class="button">
+              <button type="submit">Send your message</button>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+      <!--
+          checkbox
+      -->
+      <div>
+        <form action="#">
+          <fieldset>
+            <legend>Fruit juice size</legend>
+            <p>
+              <input type="radio" name="size" id="size_1" value="small" />
+              <label for="siez_1">Small</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_2" value="medium" />
+              <label for="siez_2">Medium</label>
+            </p>
+            <p>
+              <input type="radio" name="size" id="size_3" value="large" /><label
+                for="siez_3"
+                >Large</label
+              >
+            </p>
+          </fieldset>
+        </form>
+      </div>
+
+      <!--
+    clickable label
+-->
+
+      <div>
+        <form action="#">
+          <p>
+            <input
+              type="checkbox"
+              name="taste_cherry"
+              id="taste_1"
+              value="cherry"
+            /><label for="taste_1">I like cherry</label>
+          </p>
+          <p>
+            <input
+              type="checkbox"
+              name="taste_banana"
+              id="taste_2"
+              value="banana"
+            /><label for="taste_2">I like banana</label>
+          </p>
+        </form>
+      </div>
+    
+    <!--
+    Multiple labels
+-->
+    <div>
+      <form action="">
+        <p>Required fields are followed by<abbr title="required">*</abbr>.</p>
+        <div>
+          <label for="username">Name:</label
+          ><input type="text" name="username" />
+          <label for="username">
+            <abbr title="required" aria-label="required">*</abbr>
+          </label>
+        </div>
+        <div></div>
+        <div>
+          <label for="username"
+            >Name: <abbr title="required" aria-label="required">*</abbr
+          ></label>
+          <input type="text" id="username" name="username" />
+          <lable></lable>
+        </div>
+      </form>
+    </div>
+
+    <script src="nativeForm.js"></script>
+  </body>
+</html>
