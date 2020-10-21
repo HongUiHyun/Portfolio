@@ -1,27 +1,79 @@
 /**
- * caching
+ * LRU
  */
 
-function LFUNode(key, value) {
-  this.prev = null;
+function DLLnode(key,value){
+  this.key =key;
+  this.data = value;
   this.next = null;
-  this.key = key;
-  this.element = value;
-  this.freqCnt = 1;
+  this.prev = null;
 }
 
-function LFUDoublyLinkedList() {
-  this.head = new LFUNode("buffer head", null);
-  this.tail = new LFUNode("buffer tail", null);
+function LRUCache(capacity){
+  this.keys = {};
+  this.dd = {};
+  this.capacity =capacity;
+  this.head = new DLLnode('',null);
+  this.tail = new DLLnode('',null);
   this.head.next = this.tail;
   this.tail.prev = this.head;
-  this.size = 0;
 }
 
-function LFUCache(capacity) {
-  this.keys = {};
-  this.freq = {};
-  this.capacity = capacity;
-  this.minFreq = 0;
-  this.size = 0;
+
+LRUCache.prototype.removeNode= function(node){
+  let prev = node.prev,next = node.next;
+  prev.next = next;
+  next.prev = prev;
 }
+
+
+LRUCache.prototype.addNode = function(node){
+  let realTail = this.tail.prev;
+  realTail.next= node;
+
+  this.tail.prev =node;
+  node.prev = realTail;
+  node.next = this.tail;
+}
+
+LRUCache.prototype.get = function(key){
+  let node = this.keys[key];
+
+  if(node==undefined){
+    return null;
+  }else{
+    this.removeNode(node);
+    this.addNode(node);
+    return node.data;
+  }
+}
+
+
+LRUCache.prototype.set = function(key,value){
+  var node = this.keys[key];
+  if(node){
+    this.removeNode(node);
+  }
+
+  let newNode= new DLLnode(key,value);
+  this.addNode(newNode);
+  this.keys[key]= newNode;
+
+  if(Object.keys(this.keys).length >  this.capacity){
+    let realHead = this.head.next;
+    this.removeNode(realHead);
+    delete this.keys[realHead.key];
+  }
+  
+}
+var aa = new LRUCache(5);
+aa.set(1,1);
+aa.set(2,2);
+aa.set(3,4);
+aa.set(4,4);
+aa.set(5,5);
+aa.get(1);
+
+// aa.get(2);
+
+// console.log(aa);
