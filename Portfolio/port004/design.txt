@@ -1,0 +1,6 @@
+color palette
+#958f80
+#e2ddc7
+#cd9d8d
+#dd9166
+#54595a

@@ -5,9 +5,15 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 html,
 body {
+  font-family: "Roboto";
   height: 100%;
 }
 
