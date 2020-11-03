@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  width: 1320px;
+  background-color: #7a7a7a;
+}
+.content-container h1 {
+  color: #ffffff;
+  margin-left: 50px;
+}
+
+.twelve-column {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.twelve-column h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.one-column {
+  width: 70px;
+  height: 100%;
+  margin: 0px 20px;
+  background-color: #c4c4c4;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+.one-depth {
+  margin-top: 20px;
+}
+.one-depth-column {
+  height: 500px;
+  margin: 0px 20px;
+  background: #a1a1a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one-depth-column h1 {
+  color: #ffffff;
+}
+
+.two-depth {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+.two-depth-column {
+  height: 500px;
+  width: 620px;
+  margin: 0px 20px;
+  background: #a1a1a1a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two-depth-double {
+  width: calc((100%-20px) / 2);
+  height: 100%;
+  background: #b8b8b8;
+}
+.double-split {
+  width: 100%;
+  height: 240px;
+  background: #d8d8d8;
+}
+.split-quater {
+  width: 100%;
+  height: 240px;
+  background: #d8d8d8;
+}
+
+.double {
+  margin-right: 20px;
+}
+.split {
+  margin-bottom: 20px;
+}
+
+.three-depth {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+.three-depth-column {
+  width: 400px;
+  height: 400px;
+  margin: 0px 20px;
+  background: #a1a1a1a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.four-depth {
+  width: 100%;
+  height: 290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+}
+.four-depth-column {
+  width: 400px;
+  height: 290px;
+  margin: 0px 20px;
+  background: #a1a1a1a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

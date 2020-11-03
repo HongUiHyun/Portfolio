@@ -1,0 +1,286 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #191911;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+button:focus {
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.header {
+  display: flex;
+  height: 3em;
+  justify-content: space-between;
+  align-items: center;
+  color: #707070;
+}
+
+.header h1 {
+  margin-left: 350px;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 200px;
+}
+
+.header ul li {
+  margin: 0px 20px;
+}
+
+.main-banner {
+  position: relative;
+}
+.main-banner img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+.main-banner .main-context {
+  position: absolute;
+  top: 10%;
+  right: 200px;
+  color: #fefefe;
+  text-align: right;
+}
+
+.main-banner .main-context h1 {
+  width: 1000px;
+  font-size: 150px;
+  color: #fefefe;
+}
+.main-banner .main-context h2 {
+  width: 1000px;
+  font-size: 100px;
+  color: #fefefe;
+}
+
+.main-banner .main-context p {
+  text-align: right;
+  float: right;
+  font-size: 1.2em;
+  width: 800px;
+  color: #fefefe;
+}
+
+/* .main-banner .main-context button {
+  float: right;
+  width: 7em;
+  height: 3em;
+  border: none;
+  border-radius: 10px;
+  margin: 20px 0px;
+  font-size: 0.8em;
+  color: #191919;
+} */
+.main-banner .main-context button:focus {
+  outline: none;
+}
+
+.middle-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.middle-text span:nth-child(2) {
+  color: #6ca7ff;
+}
+.middle-text span:nth-child(3) {
+  color: #ffe85a;
+}
+
+.middle-text span:nth-child(4) {
+  color: #ff6772;
+}
+
+.middle-text span:nth-child(5) {
+  color: #3ed360;
+}
+
+.middle-text span:nth-child(6) {
+  color: #ffc377;
+}
+
+.content-container {
+  width: 1320px;
+  height: 100%;
+  margin: 150px auto;
+}
+
+.card-container section {
+  width: 1280px;
+  margin: 40px 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+.context {
+  position: relative;
+  padding: 20px 20px;
+}
+.context h1 {
+  font-size: 35px;
+}
+
+.context p {
+  font-size: 20px;
+  width: 400px;
+  margin-top: 20px;
+}
+
+.frist-section {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.frist-section img {
+  width: 840px;
+  height: auto;
+  object-fit: cover;
+}
+.frist-section .context span {
+  color: #6ca7ff;
+}
+.frist-section .context button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 140px;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  color: #fefefe;
+  background-color: #6ca7ff;
+  font-size: 25px;
+}
+
+.second-section {
+  margin: 40px 20px;
+}
+
+.second-section .card {
+  width: 620px;
+  height: 624px;
+  margin: 0px 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.second-section .card .context {
+  height: 200px;
+  position: relative;
+}
+
+.second-section .card .context p {
+  width: 580px;
+}
+.second-section .card .context button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 140px;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  color: #fefefe;
+  font-size: 25px;
+}
+.context .yellowBtn {
+  background-color: #ffe85a;
+}
+.context .redBtn {
+  background-color: #ff6772;
+}
+
+.second-section img {
+  width: 620px;
+  height: 424px;
+  object-fit: cover;
+}
+
+.third-section {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.third-section img {
+  width: 840px;
+  height: auto;
+  object-fit: cover;
+}
+
+.third-section .context button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 140px;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  color: #fefefe;
+  background-color: #a2ef4e;
+  font-size: 25px;
+}
+
+.fourth-section {
+  position: relative;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.fourth-section img {
+  width: 1280px;
+  object-fit: cover;
+  position: relative;
+}
+.fourth-section .context {
+  width: 1280px;
+  height: 300px;
+  background-color: #fefefe;
+  position: absolute;
+  bottom: 0;
+}
+.fourth-section .context p {
+  width: 100%;
+}
+
+.fourth-section button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 140px;
+  height: 60px;
+  border: none;
+  border-radius: 40px;
+  color: #fefefe;
+  background-color: #ffc377;
+  font-size: 25px;
+}
+
+.font-yellow {
+  color: #ffe85a;
+}
+.font-red {
+  color: #ff6772;
+}
+.font-green {
+  color: #a2ef4e;
+}
+.font-orange {
+  color: #ffc377;
+}
