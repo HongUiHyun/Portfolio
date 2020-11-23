@@ -167,21 +167,32 @@
 
  }
 
+
+ BinaryTree.prototype.rotateLL = function(){
+    var valueBefore = this.value; //40
+    var rightBefore = this.right; //45
+    let node = this._root
+    node.value =  node.left.value;
+
+    node.right = node.left;
+    node.left = node.left.left;
+    node.right.left = node.left.right;
+    node.right.right = valueBefore;
+    node.right.value = rightBefore;
+
+
+    // this.right = this.left;
+    // this.left = this.left.left;
+    // this.right.left = this.left.right;
+    // this.right.value = valueBefore;
+    // this.right.value = rightBefore;
+    }
+
  let bfs = new BinaryTree();
  bfs.insert(10);
- bfs.insert(4);
- bfs.insert(4);
- bfs.insert(15);
- bfs.insert(13);
- bfs.insert(17);
- bfs.insert(20);
- bfs.insert(1);
-
+ bfs.insert(8);
  bfs.insert(7);
- console.log(bfs.traverseLevelOrder());
- console.log(bfs.find(10));
- console.log(bfs.find(15));
- bfs.remove(4);
- console.log(bfs.find(4));
-
+ console.log(bfs);
+ bfs.rotateLL();
+ console.log(bfs);
 

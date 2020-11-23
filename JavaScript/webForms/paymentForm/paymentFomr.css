@@ -62,3 +62,19 @@ label em {
 button {
   margin: 20px 0 0 124px;
 }
+
+input[type="radio"]:indeterminate {
+  border: 2px solid red;
+  animation: 0.4s linear infinite alternate;
+  animation-name: boder-pulse;
+}
+
+@keyframes border-pulse {
+  from {
+    border: 2px solid red;
+  }
+
+  to {
+    border: 6px solid red;
+  }
+}
